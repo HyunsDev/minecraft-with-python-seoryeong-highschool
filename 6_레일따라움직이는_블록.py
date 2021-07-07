@@ -26,7 +26,7 @@ def checkBlock(x, y, z, lastx, lastz):
         return pos
 
     else: # 만약 이동할 레일이 없다면
-        mc.postToChat("레일이 끝났습니다!") # "레일이 끝났습니다" 출력
+        mc.postToChat("Rail is End!") # "레일이 끝났습니다" 출력
 
 cake = 92 # 케이크 블록 id 
 
@@ -39,9 +39,10 @@ y = pos.y - 2
 z = pos.z
 
 lastX = pos.x # lastX 변수 초기화
+lastZ = pos.z
 
 while(True):
-    pos2 = checkBlock(x, y, z, lastX) # 케이크가 이동할 위치 가져오기
+    pos2 = checkBlock(x, y, z, lastX, lastZ) # 케이크가 이동할 위치 가져오기
 
     # 케이크 블록 옮기기
     mc.setBlock(pos2[0], pos2[1]+1, pos2[2], cake) # 이동할 위치에 케이크 생성하기
@@ -49,6 +50,7 @@ while(True):
     
     time.sleep(0.1) # 0.1초 기다리기
     lastX = x # x 다음 레일 좌표로 변경 하기 전에 lastX에 저장
+    lastZ = z
 
     # 현재 레일의 좌표를 케이크가 옮겨진 레일의 좌표로 변경
     x = pos2[0]

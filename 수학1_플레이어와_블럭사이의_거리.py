@@ -17,11 +17,11 @@ mc = Minecraft.create()
 # 위치 가져오기
 input("첫 번째 위치로 이동한 뒤 Enter를 누르세요")
 pos1 = mc.player.getTilePos()
-mc.postToChat(f"첫 번째 위치 ({pos1[0]},{pos1[2]})")
+mc.postToChat(f"first pos ({pos1.x},{pos1.z})")
 
 input("두 번째 위치로 이동한 뒤 Enter를 누르세요")
 pos2 = mc.player.getTilePos()
-mc.postToChat(f"두 번째 위치 ({pos2[0]},{pos2[2]})")
+mc.postToChat(f"twice pos ({pos2.x},{pos2.z})")
 
 # 계산하기
 """
@@ -29,11 +29,12 @@ mc.postToChat(f"두 번째 위치 ({pos2[0]},{pos2[2]})")
 거리 = √{(x₂-x₁)² + (y₂-y₁)²}
 """
 
-pos1_x = float(pos1[0]) # 첫 번째 위치의 x좌표
-pos1_y = float(pos1[2]) # 첫 번째 위치의 y좌표 (실제 마인크래프트에서는 z축이지만, 편의를 위해 y를 사용합니다.)
-pos2_x = float(pos2[0]) # 두 번째 위치의 x좌표
-pos2_y = float(pos2[2]) # 두 번째 위치의 y좌표
+pos1_x = int(pos1.x) # 첫 번째 위치의 x좌표
+pos1_y = int(pos1.z) # 첫 번째 위치의 y좌표 (실제 마인크래프트에서는 z축이지만, 편의를 위해 y를 사용합니다.)
+pos2_x = int(pos2.x) # 두 번째 위치의 x좌표
+pos2_y = int(pos2.z) # 두 번째 위치의 y좌표
 
-distance = math.sqrt((pos2_x - pos1_x)^2 + (pos2_y - pos1_y)^2) # 두 점 사이의 거리 공식을 이용하여 거리를 계산.
+distance = math.sqrt((pos2_x - pos1_x)**2 + (pos2_y - pos1_y)**2) # 두 점 사이의 거리 공식을 이용하여 거리를 계산.
 
-mc.postToChat(f"두 점 사이의 거리: {distance}") # 마인크래프에 메세지 보내기
+mc.postToChat(f"distance: {distance}") # 마인크래프에 메세지 보내기
+

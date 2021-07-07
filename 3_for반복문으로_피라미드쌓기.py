@@ -5,7 +5,7 @@ mc = Minecraft.create()
 pos = mc.player.getTilePos() # 플레어어의 좌표 가져오기
 
 sand = 12 # 모래의 블록 ID
-sandState = 1 # 모래의 상태 ID (1: 모래, 2:붉은 모래)
+sandState = 0 # 모래의 상태 ID (0: 모래, 1:붉은 모래)
 
 x = pos.x + 1 # X축으로 1칸 이동
 y = pos.y 

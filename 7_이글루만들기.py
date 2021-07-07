@@ -13,14 +13,14 @@ newIgloo1 = Igloo(x, y, z)
 newIgloo1.build()
 sleep(0.5)
 
-newIgloo2 = Igloo(x+10, y, z)
+newIgloo2 = Igloo(x+15, y, z)
 newIgloo2.build()
 sleep(0.5)
 
-newIgloo3 = Igloo(x, y, z+10)
+newIgloo3 = Igloo(x, y, z+15)
 newIgloo3.build()
 sleep(0.5)
 
-newIgloo4 = Igloo(x+10, y, z+10)
+newIgloo4 = Igloo(x+15, y, z+15)
 newIgloo4.build()
 sleep(0.5)
