@@ -6,13 +6,14 @@ mc = Minecraft.create()
 pos1 = mc.player.getTilePos()
 
 # 얼음 블록 ID
-ice = 79
+ice = 1
 
 # for 문을 이용하여 0.1초 마다 100번 반복하는 반복문을 만들기
 import time # time 모듈 추가
 # for 문
 
-for i in range(100):
+# for i in range(100):
+while True:
     # 사용자의 현재 위치 pos2에 저장
     pos2 = mc.player.getTilePos()
     x = pos2.x
@@ -24,6 +25,6 @@ for i in range(100):
         mc.setBlock(x-2, y, z, ice)
         mc.setBlock(x+2, y, z, ice)
 
-    time.sleep(0.1)
+    time.sleep(0.03)
     # pos1에 pos2 대입 
     pos1 = pos2
