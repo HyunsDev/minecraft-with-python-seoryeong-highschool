@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from mcpi.minecraft import Minecraft # 마인크래프트 모듈 불러오기
 mc = Minecraft.create() # 마인크래프트 서버에 연결하기
 

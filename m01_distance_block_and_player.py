@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from mcpi.minecraft import Minecraft
 import math
 

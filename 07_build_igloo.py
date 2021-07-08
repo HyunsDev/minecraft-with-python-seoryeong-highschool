@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from mcpi.minecraft import Minecraft
 from time import sleep
 from igloo import Igloo

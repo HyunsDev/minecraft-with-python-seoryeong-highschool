@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import math
 from mcpi.minecraft import Minecraft
 from time import sleep

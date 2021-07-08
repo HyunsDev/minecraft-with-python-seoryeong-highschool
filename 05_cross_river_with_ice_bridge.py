@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 #마인크래프트와 연결
 from mcpi.minecraft import Minecraft
 mc = Minecraft.create()
