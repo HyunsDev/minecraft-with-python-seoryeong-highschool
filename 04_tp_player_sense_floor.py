@@ -11,6 +11,7 @@ init_pos = mc.player.getTilePos() # 플레이어의 처음 위치, 금지된 블
 while True: # 무한 반복
     now_pos = mc.player.getTilePos() # 플레이어의 현재 위치
     playerBlockType = mc.getBlock( now_pos.x, now_pos.y-1, now_pos.z ) # 플레이어의 현재 위치에 해당하는 블록
+    print(playerBlockType)
 
     if playerBlockType == ban_block: # 만약 플레이어가 금지된 블록을 밟으면
         mc.player.setTilePos(init_pos.x, init_pos.y, init_pos.z) # 플레이러를 처음 위치로 보냄
