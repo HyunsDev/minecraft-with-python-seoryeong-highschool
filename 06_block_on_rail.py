@@ -6,7 +6,6 @@ mc = Minecraft.create()
 
 
 # checkBlock 함수
-"""  뒤에서 설명 """
 def checkBlock(x, y, z, lastx, lastz):
     blockType = 66 # 레일 블록 id 66
     
