@@ -7,13 +7,10 @@ ban_block = 1 # 금지할 블록 아이디 (1: 돌)
 succes_block = 57 # 결승선 블록 아이디 (57: 다이아몬트 블록)
 
 init_pos = mc.player.getTilePos() # 플레이어의 처음 위치, 금지된 블록을 밟으면 이동할 위치
-print(F"현재 위치: {init_pos.x}, {init_pos.y}, {init_pos.z}")
 
 while True: # 무한 반복
     now_pos = mc.player.getTilePos() # 플레이어의 현재 위치
-    playerBlockType = mc.getBlock( now_pos.x, now_pos.y, now_pos.z ) # 플레이어의 현재 위치에 해당하는 블록
-    print("현재 위치: {0}, {1}, {2}".format(now_pos.x, now_pos.y, now_pos.z))
-    print(playerBlockType)
+    playerBlockType = mc.getBlock( now_pos.x, now_pos.y-1, now_pos.z ) # 플레이어의 현재 위치에 해당하는 블록
 
     if playerBlockType == ban_block: # 만약 플레이어가 금지된 블록을 밟으면
         mc.player.setTilePos(init_pos.x, init_pos.y, init_pos.z) # 플레이러를 처음 위치로 보냄
