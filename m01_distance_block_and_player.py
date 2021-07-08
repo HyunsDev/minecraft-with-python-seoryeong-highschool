@@ -35,5 +35,5 @@ pos2_y = int(pos2.z) # 두 번째 위치의 y좌표
 
 distance = math.sqrt((pos2_x - pos1_x)**2 + (pos2_y - pos1_y)**2) # 두 점 사이의 거리 공식을 이용하여 거리를 계산.
 
-mc.postToChat(f"distance: {distance}") # 마인크래프에 메세지 보내기
+mc.postToChat("distance: {0}".format(distance)) # 마인크래프에 메세지 보내기
 

@@ -12,7 +12,7 @@ print(F"현재 위치: {init_pos.x}, {init_pos.y}, {init_pos.z}")
 while True: # 무한 반복
     now_pos = mc.player.getTilePos() # 플레이어의 현재 위치
     playerBlockType = mc.getBlock( now_pos.x, now_pos.y, now_pos.z ) # 플레이어의 현재 위치에 해당하는 블록
-    print(F"현재 위치: {now_pos.x}, {now_pos.y}, {now_pos.z}")
+    print("현재 위치: {0}, {1}, {2}".format(now_pos.x, now_pos.y, now_pos.z))
     print(playerBlockType)
 
     if playerBlockType == ban_block: # 만약 플레이어가 금지된 블록을 밟으면
