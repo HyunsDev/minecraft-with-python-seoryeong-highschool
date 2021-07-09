@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 from mcpi.minecraft import Minecraft
+from time import sleep
 mc = Minecraft.create()
-import time # time 모듈 추가
+
 
 # 플레이어의 초기 좌표 pos1에 저장
 pos1 = mc.player.getTilePos()
@@ -19,6 +20,6 @@ while True:
     if (pos1 != pos2):
         mc.setBlocks(x-1, y-1, z-1, x+1, y-1, z+1, ice)
 
-    time.sleep(0.03)
+    sleep(0.03)
     # pos1에 pos2 대입 
     pos1 = pos2

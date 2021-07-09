@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from mcpi.minecraft import Minecraft
-import time
+from time import sleep
 
 mc = Minecraft.create()
 
@@ -48,7 +48,7 @@ while(True):
     mc.setBlock(pos2[0], pos2[1]+1, pos2[2], cake) # 이동할 위치에 케이크 생성하기
     mc.setBlock(x, y+1, z, 0) # 이전 위치의 케이크 제거하기
     
-    time.sleep(0.1) # 0.1초 기다리기
+    sleep(0.1) # 0.1초 기다리기
     lastX = x # x 다음 레일 좌표로 변경 하기 전에 lastX에 저장
     lastZ = z
 
