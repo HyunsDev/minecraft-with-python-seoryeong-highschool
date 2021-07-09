@@ -17,7 +17,7 @@ while True: # 무한 반복
         mc.player.setTilePos(init_pos.x, init_pos.y, init_pos.z) # 플레이러를 처음 위치로 보냄
     
     elif playerBlockType == succes_block: # 만약 플레이어가 결승선 블록을 밟으면
-        mc.postToChat("finish!") # 서버에 "결승선에 도달했습니다" 매세지를 보내고
+        mc.postToChat("finish!") # 서버에 "finish" 매세지를 보내고
         break # 반복문을 탈출함
 
     else:

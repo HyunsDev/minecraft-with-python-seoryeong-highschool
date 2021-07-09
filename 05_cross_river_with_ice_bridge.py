@@ -4,22 +4,23 @@ from time import sleep
 mc = Minecraft.create()
 
 
-# 플레이어의 초기 좌표 pos1에 저장
-pos1 = mc.player.getTilePos()
+# 플레이어의 처음 위치를 first_pos에 저장
+first_pos = mc.player.getTilePos()
 
 # 얼음 블록 ID
 ice = 79
 
 while True:
-    # 사용자의 현재 위치 pos2에 저장
-    pos2 = mc.player.getTilePos()
-    x = pos2.x
-    y = pos2.y
-    z = pos2.z
-    # if 문 이용(pos1과 pos2가 다르면 얼음 다리 블록 놓기)
-    if (pos1 != pos2):
+    # 플레이어의 현재 위치를 last_pos에 저장
+    last_pos = mc.player.getTilePos()
+    x = last_pos.x
+    y = last_pos.y
+    z = last_pos.z
+    
+    # if 문 이용(first_pos과 last_pos가 다르면 얼음 다리 블록 놓기)
+    if (first_pos != last_pos):
         mc.setBlocks(x-1, y-1, z-1, x+1, y-1, z+1, ice)
+    first_pos = last_pos # first_pos에 last_pos 대입
 
     sleep(0.03)
-    # pos1에 pos2 대입 
-    pos1 = pos2
+
