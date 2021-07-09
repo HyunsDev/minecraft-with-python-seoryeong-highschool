@@ -27,7 +27,7 @@ pos.x += 3
 mc.setBlocks(pos.x, pos.y-20, pos.z, pos.x, pos.y + 20, pos.z, block2)
 mc.setBlocks(pos.x-20, pos.y, pos.z, pos.x+20, pos.y, pos.z, block2)
 for x in range(-100, 101):
-    y = a*x*x + b*x + c
+    y = (a*x*x) + (b*x) + (c)
     ax = round(x/10)
     ay = round(y/10)
     mc.setBlock(pos.x+ax, pos.y+ay, pos.z, block)
