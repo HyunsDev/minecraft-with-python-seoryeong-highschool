@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from mcpi.minecraft import Minecraft
+from time import sleep
 mc = Minecraft.create()
 
 pos = mc.player.getTilePos() # 플레이어의 좌표 가져오기
