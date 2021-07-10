@@ -23,7 +23,7 @@ b = float(input("b를 입력하세요: "))
 c = float(input("c를 입력하세요: "))
 
 pos.x += 3
-
+``
 mc.setBlocks(pos.x, pos.y-20, pos.z, pos.x, pos.y + 20, pos.z, block2)
 mc.setBlocks(pos.x-20, pos.y, pos.z, pos.x+20, pos.y, pos.z, block2)
 for x in range(-100, 101):

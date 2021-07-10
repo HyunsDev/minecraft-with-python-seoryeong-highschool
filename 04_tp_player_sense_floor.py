@@ -3,7 +3,7 @@ from mcpi.minecraft import Minecraft
 from time import sleep
 mc = Minecraft.create()
 
-ban_block = 1 # 금지할 블록 아이디 (1: 돌)
+ban_block = 45 # 금지할 블록 아이디 (1: 돌)
 succes_block = 57 # 결승선 블록 아이디 (57: 다이아몬트 블록)
 
 init_pos = mc.player.getTilePos() # 플레이어의 처음 위치, 금지된 블록을 밟으면 이동할 위치

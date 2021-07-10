@@ -38,3 +38,4 @@ distance = math.sqrt((pos2_x - pos1_x)**2 + (pos2_y - pos1_y)**2) # 두 점 사�
 
 mc.postToChat("distance: {0}".format(distance)) # 마인크래프에 메세지 보내기
 
+

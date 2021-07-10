@@ -6,6 +6,7 @@ from time import sleep
 mc = Minecraft.create()
 
 """
+
 참고!!
 분수는 소수로 바꿔서 입력하세요.
 
